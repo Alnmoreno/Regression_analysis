@@ -37,9 +37,7 @@ const Game = {
         }
         break;
 
-      case GAME_STATE.COMBAT:
-      case GAME_STATE.COMBAT_ELITE:
-      case GAME_STATE.COMBAT_BOSS: {
+      case GAME_STATE.COMBAT: {
         const node = Map.getCurrentNode();
         const floor = node ? node.row : 0;
         const enemyIds = zombiesForNode(node ? node.type : NODE_TYPE.COMBAT, floor);

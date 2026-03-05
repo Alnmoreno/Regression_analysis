@@ -297,7 +297,7 @@ const Combat = {
       // Windows
       for (let wy = 420 - b.h + 15; wy < 420 - 20; wy += 22) {
         for (let wx = b.x + 8; wx < b.x + b.w - 8; wx += 16) {
-          const lit = Math.random() > 0.7;
+          const lit = ((wx * 7 + wy * 13) % 10) > 7;
           R.fillRect(wx, wy, 7, 9, lit ? '#443322' : '#0a0a0a');
         }
       }
